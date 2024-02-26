@@ -19,7 +19,7 @@ const RegisterManager = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("https://internbackend-production.up.railway.app/register", formData);
+      const response = await axios.post("https://industrial-backend.azurewebsites.net/register", formData);
 
       // Handle the response as needed (e.g., show a success message)
       console.log("Response:", response.data);
@@ -31,6 +31,7 @@ const RegisterManager = () => {
         telp: "",
         alamat: "",
       });
+      window.location.href = '/loginManager'
     } catch (error) {
       // Handle any errors that occur during the request
       console.error("Error:", error);

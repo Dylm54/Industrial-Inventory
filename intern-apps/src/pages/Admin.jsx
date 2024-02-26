@@ -14,7 +14,7 @@ export default function Admin() {
     const isFirstRun = useRef(true);
 
     useEffect(() => {
-        const getAllUrl = "https://internbackend-production.up.railway.app/get-product/search"
+        const getAllUrl = "https://industrial-backend.azurewebsites.net/get-product/search"
 
         const fetchAllData = async () => {
             try {
@@ -44,7 +44,7 @@ export default function Admin() {
         }
         const getFilteredData = async () => {
             try {
-                const filterResponse = await axios.get(`https://internbackend-production.up.railway.app/get-product/filter?kategori=${category}`, {
+                const filterResponse = await axios.get(`https://industrial-backend.azurewebsites.net/get-product/filter?kategori=${category}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     }
@@ -61,7 +61,7 @@ export default function Admin() {
     const handleSearch = () => {
         const getSearchedData = async () => {
             try {
-                const searchResponse = await axios.get(`https://internbackend-production.up.railway.app/get-product/search?nama=${search}`, {
+                const searchResponse = await axios.get(`https://industrial-backend.azurewebsites.net/get-product/search?nama=${search}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     }
