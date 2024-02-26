@@ -34,7 +34,7 @@ const LoginManager = () => {
     };
     // Mengirimkan data ke API menggunakan Axios
     axios
-      .post("https://internbackend-production.up.railway.app/login-manager", userData)
+      .post("https://industrial-backend.azurewebsites.net/login-manager", userData)
       .then((response) => {
         const { token } = response.data; // Ambil token dari respons API
         
@@ -95,7 +95,7 @@ const LoginManager = () => {
               </span>
             </h2>
           </div>
-          <img src={illuslogin} className="loginman-illus w-[450px] hidden sm:flex" />
+          <img src={illuslogin} alt="login" className="loginman-illus w-[450px] hidden sm:flex" />
         </div>
       </form>
 
