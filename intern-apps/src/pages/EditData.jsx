@@ -95,7 +95,7 @@ const EditData = () => {
 
     try {
       // Mengirim data ke API untuk melakukan update
-      const response = await axios.delete(`https://internbackend-production.up.railway.app/update-product/delete?id=${idData}`, {
+      const response = await axios.delete(`https://industrial-backend.azurewebsites.net/update-product/delete?id=${idData}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
